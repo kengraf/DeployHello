@@ -1,5 +1,5 @@
 FROM nginx
 COPY static /usr/share/nginx/html
 EXPOSE 80
-CMD ['/usr/bin/nginx']
+CMD ["nginx", "-g", "daemon off;"]
 # ENTRYPOINT ["nginx"]
