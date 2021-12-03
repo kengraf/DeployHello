@@ -1,7 +1,6 @@
 {
-  "name": "Node.js Sample",
-  "description": "A barebones Node.js app using Express",
-  "repository": "https://github.com/heroku/node-js-getting-started",
-  "logo": "https://node-js-sample.herokuapp.com/node.png",
-  "keywords": ["node", "express", "static"]
+  "name": "Hello World",
+  "description": "A barebones nginx app",
+  "stack": "container",
+  "keywords": ["cybersecurity", "education", "nginx", "docker"]
 }
