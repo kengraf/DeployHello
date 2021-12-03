@@ -1,4 +1,5 @@
 FROM nginx
 COPY static /usr/share/nginx/html
-EXPOSE 8080
+EXPOSE 80
+CMD ['/usr/bin/nginx']
 # ENTRYPOINT ["nginx"]
