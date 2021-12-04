@@ -4,6 +4,7 @@ WORKDIR /CODE
 COPY . /CODE
 COPY static /CODE
 
+RUN python -m pip install --upgrade pip
 RUN pip install -r requirements.txt --no-cache-dir
 CMD python -m http.server $PORT
 # FROM nginx
