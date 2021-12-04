@@ -1,5 +1,9 @@
 FROM python:3.7-slim-buster
-COPY static .
+
+WORKDIR /CODE
+COPY . /CODE
+COPY static /CODE
+
 RUN pip install -r requirements.txt --no-cache-dir
 CMD python -m http.server $PORT
 # FROM nginx
