@@ -4,4 +4,4 @@
 #
 #    ./scripts/pip-compile.sh
 #
-http
+html
