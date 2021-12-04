@@ -1,9 +1,12 @@
 daemon off;
 # Heroku dynos have at least 4 cores.
 
+worker_processes  auto;
+
 events {
 	use epoll;
 	accept_mutex on;
+	worker_connections  1024;
 }
 
 http {
@@ -14,9 +17,8 @@ http {
 
 	server_tokens off;
 
-	log_format l2met 'measure#nginx.service=$request_time request_id=$http_x_request_id';
-	access_log '/tmp/access.log' l2met;
-	error_log '/tmp/error.log';
+	access_log /tmp/access.log;
+	error_log /tmp/error.log;
 
 	include mime.types;
 	default_type application/octet-stream;
@@ -30,7 +32,7 @@ http {
 	}
 
 	server {
-		listen <%= ENV["PORT"] %> ssl;
+		listen 443 ssl;
 		server_name _;
 		keepalive_timeout 5;
 
