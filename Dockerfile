@@ -5,8 +5,7 @@ COPY . /code/
 
 RUN python -m pip install --upgrade pip
 RUN python -m pip install -r /code/requirements.txt
-EXPOSE 80
-# RUN python -m http.server
+EXPOSE 443
+RUN python -m http.server &
 # ENTRYPOINT ["nginx"]
-ENTRYPOINT python -m http.server
 
