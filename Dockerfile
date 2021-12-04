@@ -1,6 +1,6 @@
 FROM nginx
 COPY static /usr/share/nginx/html
 EXPOSE 443
-RUN nginx -p /usr/share/nginx/html &
+CMD nginx -p /usr/share/nginx/html -g 'daemon off;'
 # ENTRYPOINT ["nginx"]
 
