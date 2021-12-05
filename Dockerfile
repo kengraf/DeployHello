@@ -7,7 +7,7 @@ COPY static /CODE
 RUN python -m pip install --upgrade pip
 RUN pip install -r requirements.txt --no-cache-dir
 EXPOSE 443
-RUN  python -m http.server $PORT &
+# RUN  python -m http.server $PORT &
 # FROM nginx
 # COPY static /usr/share/nginx/html
 # EXPOSE 443
