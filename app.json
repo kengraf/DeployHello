@@ -1,6 +1,6 @@
 {
   "name": "Hello World",
-  "description": "A barebones nginx app",
+  "description": "A barebones web server",
   "stack": "container",
-  "keywords": ["cybersecurity", "education", "nginx", "docker"]
+  "keywords": ["cybersecurity", "education", "python", "docker"]
 }
