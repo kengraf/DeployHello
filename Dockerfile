@@ -6,4 +6,4 @@ COPY static /CODE
 
 RUN python -m pip install --upgrade pip
 RUN pip install -r requirements.txt --no-cache-dir
-EXPOSE 80
+EXPOSE 8000
